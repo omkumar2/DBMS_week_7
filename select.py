@@ -4,11 +4,11 @@ conn = None
 
 try:
     #connect to database
-    conn = psycopg2.connect(database = "test",user = "postgres",password = "Om@270606", host = "127.0.0.1",port = "5433")
+    conn = psycopg2.connect(database = "learn",user = "postgres",password = "Om@270606", host = "127.0.0.1",port = "5433")
     print("Database connected")
     cur = conn.cursor()  #create a cursor
     cur.execute('''
-        SELECT * from employees
+        SELECT * from classroom
          ''')
     
     # result = cur.fetchone()    #this is for fetching frist row
